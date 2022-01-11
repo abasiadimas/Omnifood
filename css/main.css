@@ -1,0 +1,32 @@
+/* General Rules */
+
+:root {
+  --color-primary: #e67e22;
+  --color-secondary: ;
+  --color-accent: #ff3400;
+  --color-grey: #777;
+  --color-shade: ;
+  --color-tint: ;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--color-grey);
+}
