@@ -9,8 +9,9 @@
   --color-accent-tint: #fdf2e9;
   --color-accent-shade: #cf711f;
   --color-grey: #444;
-  --color-shade: ;
-  --color-tint: ;
+  --color-vegetarian-tag: #51cf66;
+  --color-vegan-tag: #94d82d;
+  --color-paleo-tag: #ffd43b;
 }
 
 *,
@@ -21,6 +22,10 @@
 
 img {
   width: 100%;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .container {
@@ -47,10 +52,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.margin-right-sm {
-  margin-right: 1.5rem;
-}
-
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -59,7 +60,7 @@ img {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 10px;
-  transition: background 0.4s;
+  transition: all 0.4s;
 }
 
 .btn--primary:link,
@@ -85,6 +86,33 @@ img {
   color: white;
   /* Trick to create an inside border */
   box-shadow: inset 0 0 0 3px var(-);
+}
+
+.btn--link:link,
+.btn--link:visited {
+  background: var(--color-accent-shade);
+  color: whitesmoke;
+}
+
+.btn--link:hover,
+.btn--link:active {
+  background: #fff;
+  color: var(--color-accent-shade);
+  box-shadow: inset 0 0 0 3px var(--color-accent-shade);
+}
+
+/* Helper classes */
+
+.margin-right-sm {
+  margin-right: 1.5rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /***********************/
@@ -176,12 +204,22 @@ body {
   font-size: 1.8rem;
   text-decoration: none;
   color: #444;
-  transition: color 0.3s;
+  transition: color 0.4s;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
   color: var(--color-accent-shade);
+}
+
+.main-nav-link-border:link,
+.main-nav-link-border:visited {
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav-link-border:hover,
+.main-nav-link-border:active {
+  border-bottom: 2px solid currentColor;
 }
 
 .main-nav-link.nav-cta:link,
@@ -196,6 +234,7 @@ body {
 .main-nav-link.nav-cta:active {
   background: var(--color-accent-shade);
 }
+
 /***********************/
 /* Hero */
 /***********************/
@@ -272,8 +311,9 @@ body {
   filter: brightness(0);
   opacity: 0.5;
 }
+
 /***********************/
-/* How IT WORKS*/
+/* How it works*/
 /***********************/
 
 .section-how {
@@ -335,4 +375,122 @@ body {
   font-size: 1.8rem;
   line-height: 1.3;
   margin-top: 3rem;
+}
+
+/***********************/
+/* Meals */
+/***********************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem;
+  overflow: hidden;
+}
+
+.tags {
+  display: flex;
+  font-weight: 600;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.meal-tag {
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+}
+
+.meal-tag--vegetarian {
+  background: var(--color-vegetarian-tag);
+}
+
+.meal-tag--vegan {
+  background: var(--color-vegan-tag);
+}
+
+.meal-tag--paleo {
+  background: var(--color-paleo-tag);
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: var(--color-grey);
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.meal-specifications {
+  display: flex;
+  /* It should be change to row for mobile */
+  flex-direction: column;
+  gap: 1.8rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--color-accent-shade);
+}
+
+.diets {
+  display: flex;
+  /* It should be change to row for mobile */
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  /* It should be change to row for mobile */
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-accent-shade);
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
 }
