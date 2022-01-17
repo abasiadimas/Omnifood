@@ -40,6 +40,22 @@ strong {
   row-gap: 9.6rem;
 }
 
+.grid--testimonials {
+  display: grid;
+  align-items: center;
+}
+
+.grid--testimonial {
+  display: grid;
+  row-gap: 4.8rem;
+  column-gap: 6rem;
+}
+
+.grid--gallery {
+  display: grid;
+  gap: 1.6rem;
+}
+
 .grid--vertical-aligned {
   align-items: center;
 }
@@ -48,8 +64,16 @@ strong {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid--2cols-55-45 {
+  grid-template-columns: 55fr 45fr;
+}
+
 .grid--3cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .btn:link,
@@ -101,6 +125,28 @@ strong {
   box-shadow: inset 0 0 0 3px var(--color-accent-shade);
 }
 
+.list {
+  list-style: none;
+  display: flex;
+  /* It should be change to row for mobile */
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-accent-shade);
+}
+
 /* Helper classes */
 
 .margin-right-sm {
@@ -109,6 +155,10 @@ strong {
 
 .margin-bottom-md {
   margin-bottom: 4.8rem;
+}
+
+.margin-top-lg {
+  margin-top: 9.6rem;
 }
 
 .text-center {
@@ -468,29 +518,135 @@ body {
   align-items: center;
 }
 
-.list {
-  list-style: none;
-  display: flex;
-  /* It should be change to row for mobile */
-  flex-direction: column;
-  gap: 1.6rem;
-  margin-top: 3rem;
-}
-
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: var(--color-accent-shade);
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
+}
+
+/***********************/
+/* Testimonials */
+/***********************/
+
+.section-testimonials {
+  background: var(--color-accent-tint);
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonial-img {
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  margin-left: 0;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #6f6f6f;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.gallery {
+  /* the same as the gap of the grid--gallery */
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  /* Elliminate the gap between the imgs */
+  display: block;
+  transition: all 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/***********************/
+/* Pricing */
+/***********************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 10% 0% 10% 0% / 10% 0% 10% 0%;
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid var(--color-accent-tint);
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background: var(--color-accent-tint);
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+  color: whitesmoke;
+  background: darkslateblue;
+  padding: 0.8rem 4rem;
+  transform: translate(26%, 60%) rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: var(--color-accent-shade);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.plan-currency {
+  font-size: 3.2rem;
+  margin-right: 0.8rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  margin: 0 1.6rem 0 0;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 0;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
 }
