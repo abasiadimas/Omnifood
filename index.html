@@ -469,7 +469,7 @@
           </h2>
         </aside>
 
-        <div class="container grid grid--2cols">
+        <div class="container grid grid--2cols margin-bottom-md">
           <article class="pricing-plan pricing-plan--starter">
             <div class="plan-header">
               <p class="plan-name">Starter</p>
@@ -531,11 +531,103 @@
           </article>
         </div>
 
+        <div class="container">
+          <aside class="pricing-details">
+            * Prices include all applicable taxes. You can cancel at any time.
+            Both plan include the following:
+          </aside>
+        </div>
+
         <div class="container grid grid--4cols margin-top-lg">
-          <article class="feature">Feature 1</article>
-          <article class="feature">Feature 2</article>
-          <article class="feature">Feature 3</article>
-          <article class="feature">Feature 4</article>
+          <article class="feature">
+            <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+            <p class="feature-title">Never cook again!</p>
+            <p class="feature-text">
+              Our subscriptions cover 365 days per year, even including major
+              holidays.
+            </p>
+          </article>
+          <article class="feature">
+            <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+            <p class="feature-title">Local and organic</p>
+            <p class="feature-text">
+              Our cooks only use local, fresh, and organic products to prepare
+              your meals.
+            </p>
+          </article>
+          <article class="feature">
+            <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+            <p class="feature-title">No waste</p>
+            <p class="feature-text">
+              All our partners only use reusable containers to package all your
+              meals.
+            </p>
+          </article>
+          <article class="feature">
+            <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+            <p class="feature-title">Pause anytime</p>
+            <p class="feature-text">
+              Going on vacation? Just pause your subscription, and we refund
+              unused days.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container cta">
+          <div class="cta-textbox">
+            <h2 class="heading-secondary">Get your first meal for free</h2>
+            <p class="cta-text">
+              Healthy, tasty and hassle-free meals are waiting for you. Start
+              eating well today. You can cancel or pause anytime. And the first
+              meal is on us!
+            </p>
+            <form class="cta-form" action="#" method="get">
+              <div class="form-element">
+                <label for="fname">Full name</label>
+                <input
+                  autofocus
+                  type="text"
+                  placeholder="John Smith"
+                  id="fname"
+                  name="fname"
+                  required
+                />
+              </div>
+
+              <div class="form-element">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  placeholder="Johnsmith@email.com"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div class="form-element">
+                <label for="where-question">Where did you hear from us?</label>
+                <select name="where-question" id="where-question" required>
+                  <option value="">Please choose one option:</option>
+                  <option value="friends">Friends and family</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="ads">Web advertisment</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-element form-button">
+                <button class="btn btn--form">Sign up now</button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="cta-imagebox"
+            role="img"
+            aria-label="Woman eating food"
+          ></div>
         </div>
       </section>
     </main>

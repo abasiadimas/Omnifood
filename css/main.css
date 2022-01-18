@@ -76,6 +76,7 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -85,6 +86,8 @@ strong {
   padding: 1.6rem 3.2rem;
   border-radius: 10px;
   transition: all 0.4s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn--primary:link,
@@ -119,10 +122,18 @@ strong {
 }
 
 .btn--link:hover,
-.btn--link:active {
+.btn--link:active,
+.btn--form:hover {
   background: #fff;
   color: var(--color-accent-shade);
   box-shadow: inset 0 0 0 3px var(--color-accent-shade);
+}
+
+.btn--form {
+  background: var(--color-accent-shade);
+  color: whitesmoke;
+  padding: 1.2rem;
+  width: 85%;
 }
 
 .list {
@@ -579,7 +590,7 @@ body {
 /***********************/
 
 .section-pricing {
-  padding: 9.6rem 0;
+  padding: 9.6rem 0 0 0;
 }
 
 .pricing-plan {
@@ -649,4 +660,106 @@ body {
 .plan-sign-up {
   text-align: center;
   margin-top: 4.8rem;
+}
+
+.pricing-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
+}
+
+/***********************/
+/* Features */
+/***********************/
+
+.feature-icon {
+  color: var(--color-accent);
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-accent-tint);
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/***********************/
+/* CTA */
+/***********************/
+
+.section-cta {
+  padding: 9.6rem 0;
+  background: var(--color-accent-tint);
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  padding: 0 6.4rem 0 6.4rem;
+  column-gap: 1rem;
+}
+
+.cta-textbox {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.cta-text {
+  margin-bottom: 4.8rem;
+}
+
+.cta-imagebox {
+  background-image: url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 1.6rem;
+}
+
+.form-element {
+  font-family: inherit;
+}
+
+.form-element label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.form-element input,
+.form-element select {
+  width: 85%;
+  padding: 1rem;
+  border: 1px solid #999;
+  color: #555;
+  background: var(--color-accent-tint);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form-element input::placeholder {
+  color: #888;
+}
+
+.form-button {
+  align-self: flex-end;
+  align-self: end;
 }
