@@ -76,6 +76,10 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -725,6 +729,7 @@ body {
   background-image: url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 0.85;
 }
 
 .cta-form {
@@ -762,4 +767,92 @@ body {
 .form-button {
   align-self: flex-end;
   align-self: end;
+}
+
+/***********************/
+/* Footer */
+/***********************/
+
+.footer {
+  padding: 12.8rem 0;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-iconlinks {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 3rem;
+  width: 3rem;
+  padding-left: 0;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 4rem 0;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.footer-nav {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--color-accent-shade);
+}
+
+.instagram:hover,
+.instagram:active {
+  color: #8a3ab9;
+}
+
+.facebook:hover,
+.facebook:active {
+  color: #4267b2;
+}
+
+.twitter:hover,
+.twitter:active {
+  color: #00acee;
 }
