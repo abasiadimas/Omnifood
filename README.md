@@ -37,6 +37,8 @@ Project is: _in progress
 
 ## Version History
 
+-2.0
+	Responsive Desing
 -1.0
 	Initial Release - Desktop Design
 
