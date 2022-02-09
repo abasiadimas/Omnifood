@@ -1,7 +1,7 @@
 # Omnifood
 
 > A fictional startup company
-> Live
+> Live https://omnifood-absd.netlify.app/
 
 ## Table of Contents
 
