@@ -107,14 +107,14 @@ strong {
 
 .btn--secondary:link,
 .btn--secondary:visited {
-  background: #cccccc;
-  color: var(--color-grey);
+  background: var(--color-grey);
+  color: white;
 }
 
 .btn--secondary:hover,
 .btn--secondary:active {
-  background: var(--color-grey);
-  color: white;
+  background: #aaa;
+  color: var(--color-grey);
   /* Trick to create an inside border */
   box-shadow: inset 0 0 0 3px var(-);
 }
@@ -806,6 +806,10 @@ body {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 
+.logo {
+  margin: auto;
+}
+
 .logo-col {
   display: flex;
   flex-direction: column;
@@ -821,6 +825,8 @@ body {
   display: flex;
   list-style: none;
   gap: 2.4rem;
+  padding-left: 0;
+  margin: 0 auto;
 }
 
 .social-icon {
